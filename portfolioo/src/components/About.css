@@ -1,0 +1,157 @@
+.about {
+  background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+  color: white;
+  padding: 80px 0;
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.about-section.reverse {
+  grid-template-columns: 1fr 2fr;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.about-character {
+  display: flex;
+  justify-content: center;
+}
+
+.character-1,
+.character-2 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.character-1 img,
+.character-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== Innovation Section ===== */
+.innovation-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.innovation-graphics {
+  position: relative;
+  height: 300px;
+}
+
+.innovation-circles {
+  position: relative;
+  height: 100%;
+}
+
+/* === Floating Glowing Circles === */
+.inno-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  animation: floatUpDown 2s ease-in-out infinite;
+}
+
+.inno-circle-1 {
+  width: 80px;
+  height: 80px;
+  top: 20px;
+  left: 50px;
+}
+
+.inno-circle-2 {
+  width: 120px;
+  height: 120px;
+  top: 80px;
+  left: 20px;
+}
+
+.inno-circle-3 {
+  width: 60px;
+  height: 60px;
+  top: 150px;
+  left: 80px;
+}
+
+/* === Apply Glow & Delay Animation === */
+.floating-circle {
+  animation: floatUpDown 2s ease-in-out infinite;
+}
+
+.glow {
+  box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
+
+.delay-0 {
+  animation-delay: 0s;
+}
+
+.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.delay-2 {
+  animation-delay: 0.6s;
+}
+
+/* Floating Animation */
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.innovation-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-section,
+  .about-section.reverse,
+  .innovation-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .about-content h2 {
+    font-size: 2rem;
+  }
+
+  .innovation-graphics {
+    height: 200px;
+  }
+}
